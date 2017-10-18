@@ -19,3 +19,25 @@ I employed a multilayer bidirectional RNN for the implementation of the encoder 
 
 #### Decoder
 Two types of decoders were built for diferent purpose, one for training and the other for inference. The training decoder is used for training purpose, and it takes the target sequence as the input to facilitate the training process (see Figure 5(a) - from Seq2Seq intro10). The inference decoder is exploited to generate the translated sentence, and the output of previous timestep is utilized as the input of current timestep Figure 5(b). A densely connected layer is added on the top of the decoders to generate the predicted word in each timestep. To improve the performance, the attention mechanism [6] is utilized that allows the decoders to obtain the most relevant memories from the encoder to enhance the decoding process.
+
+### Examples
+* **English**: your least liked fruit is the pear , but their least liked is
+the banana .
+* **French** (translated): votre moins aime fruit est la poire , mais leur
+moins aime est la mangue .
+* **French** (target): votre moins aime fruit est la poire , mais leur
+moins aime est la banane .
+
+* **English**: california is usually busy during spring , but it is never
+rainy in january .
+* **French** (translated): californie est generalement occupe au printemps
+, mais jamais des pluies en janvier .
+* **French** (target): californie est generalement occupe au printemps ,
+mais jamais des pluies en janvier .
+
+* **English**: the apple is my most loved fruit , but the grape is his
+most loved .
+* **French Words**: la pomme est le fruit le plus mon cher , mais
+le raisin est le plus aime
+* **French Words**: la pomme est le fruit le plus mon cher , mais le
+raisin est le plus aime .
