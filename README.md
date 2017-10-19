@@ -4,6 +4,10 @@ In this project I implemented a sequence-to-sequence neural machine translation 
 
 The details of the project can be found in the [project report](https://github.com/jswong65/TensorFlow_Machine_Translation/blob/master/project_report.pdf).
 
+[baseline_model](https://github.com/jswong65/TensorFlow_Machine_Translation/blob/master/baseline_model.ipynb) is a vanilla seq2seq.
+
+[attention_model](https://github.com/jswong65/TensorFlow_Machine_Translation/blob/master/attention_model.ipynb) leverages the bidirectional RNN for the encorder and the attention mechanism for the decoding process.
+
 ### Data Preprocessing
 * The first step is to ensure all of the words is in lower case since a word in either upper case or lower case would be considered as the same word.
 * In this dataset, the input sentences and target sentences have different length. To perform mini-batch training we need to pad <PAD> both the input sentences and target sentences to ensure the input sentences have the same length in a batch as the same for target sentences.
